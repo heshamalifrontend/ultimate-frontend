@@ -47,13 +47,22 @@ gulp.task('sass', function(){
 
 // js task
 gulp.task('js', function(){
-    return gulp.src('stage/js/*.js') // content a developer file
+    return gulp.src('stage/js/page.js') // content a developer file
             .pipe(concat('main.js'))// concat all files in all.js file
             .pipe(uglify())
             .pipe(gulp.dest('dist/js'))// content a clint file
             .pipe(notify("js task is done!"))
             .pipe(livereload());
 });
+// js task
+// gulp.task('jsLibrary', function(){
+//     return gulp.src('stage/js/lips/*.js') // content a developer file
+//             // .pipe(concat('lips.js'))// concat all files in all.js file
+//             .pipe(uglify())
+//             .pipe(gulp.dest('dist/js/lips'))// content a clint file
+//             .pipe(notify("js task is done!"))
+//             .pipe(livereload());
+// });
 
 
 
@@ -73,7 +82,8 @@ gulp.task('watch', function(){
     livereload.listen();
     gulp.watch('stage/html/*.pug' , gulp.series('html'));
     gulp.watch(['stage/css/**/*.scss','stage/css/**/*.css'] , gulp.series('sass')); 
-    gulp.watch('stage/js/*.js' , gulp.series('js'));
+    gulp.watch('stage/js/**/*.js' , gulp.series('js'));
+    // gulp.watch('stage/js/lips/*.js' , gulp.series('jsLibrary'));
     gulp.watch('dist/**/*.*',gulp.series('compress'))
 });
 

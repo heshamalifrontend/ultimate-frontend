@@ -1,0 +1,1 @@
+let toggle=document.querySelector(".toggle-slide"),content=document.querySelector(".content-area"),sidebar=document.querySelector(".sidebar");toggle.addEventListener("click",function(){content.classList.toggle("no-sidebar"),sidebar.classList.toggle("no-sidebar")});
