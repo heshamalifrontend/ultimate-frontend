@@ -29,15 +29,42 @@
     }
     .content-gear{
         transform: translate(-20px,100px);
-        // .colors{
-
-        // }
-        // .fonts{
-
-        // }
-        // .sidebar-options{
-
-        // }
+        font-size: 20px;
+        font-weight: normal;
+        .colors{
+            ul{
+                $colors: #27ae60,#2980b9,#c0392b;
+                // @for $i from 1 through length($colors) {
+                //     li:nth-chlid(#{$i}) {
+                //         background-color: nth($colors , $i);
+                //     }
+                // }
+                li:nth-child(1){
+                    background-color:#27ae60;
+                }
+                li:nth-child(2){
+                    background-color:#2980b9;
+                }
+                li:nth-child(3){
+                    background-color:#c0392b;
+                }
+                li{
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    opacity: 0.8;
+                    cursor: pointer;
+                    display: inline-block;
+                    &.active{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .fonts{
+        }
+        .sidebar-options{
+        }
     }
 }
 

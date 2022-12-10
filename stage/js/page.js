@@ -65,3 +65,33 @@ parentGear.addEventListener("click",()=>{
     Gear.classList.toggle("active")
 })
 // end start gear 
+
+
+// start switch color 
+let body = document.body
+let colorBlue = document.querySelector(".blue")
+let colorRed = document.querySelector(".red")
+let colorGreen = document.querySelector(".green")
+console.log(colorRed)
+
+colorRed.addEventListener("click",()=>{
+    body.classList.toggle("red")
+})
+colorBlue.addEventListener("click",()=>{
+    body.classList.toggle("blue")
+})
+colorGreen.addEventListener("click",()=>{
+    body.classList.toggle("green")
+})
+
+if (body.classList.contains("red")){
+    body.classList.remove("blue")
+    body.classList.remove("green")
+}else if body.classList.contains("blue"){
+    body.classList.remove("red")
+    body.classList.remove("green")
+}else if body.classList.contains("green"){
+    body.classList.remove("red")
+    body.classList.remove("blue")
+}
+// end switch color 

@@ -1,7 +1,16 @@
 body{
-background-color: #3c413f !important;
-color:#1da756 !important;
-font-family: 'Roboto', sans-serif !important;
+    background-color: #3c413f !important;
+    color:#1da756 !important;
+    font-family: 'Roboto', sans-serif !important;
+    &.red{
+        color:#c0392b !important;
+    }
+    &.blue{
+        color:#2980b9 !important;
+    }
+    &.green{
+        color:#1da756 !important;
+}
 }
 .page{
     min-height: 100vh;
