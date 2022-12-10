@@ -1,6 +1,7 @@
 body{
 background-color: #3c413f !important;
 color:#1da756 !important;
+font-family: 'Roboto', sans-serif !important;
 }
 .page{
     min-height: 100vh;
@@ -17,6 +18,12 @@ color:#1da756 !important;
         .toggle-slide{
             font-size: 20px;
         }
+    }
+    .content{
+        border-bottom: 4px solid #1da756;
+        margin-top: 5px;
+        padding:5px 10px;
+        width: fit-content;
     }
 }
 a{

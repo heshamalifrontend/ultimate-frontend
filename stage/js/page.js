@@ -22,3 +22,10 @@ misc.addEventListener("click",function(){
 })
 // end hidden links
 
+// start toggle notification 
+let bell = document.querySelector(".fa-bell")
+let notification = document.querySelector(".notification")
+bell.addEventListener("click",()=>{
+notification.classList.toggle("active")
+})
+// end toggle notification 

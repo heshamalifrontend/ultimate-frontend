@@ -1,9 +1,103 @@
 header{
-    background-color: #232826;
+    background-color: hsl(156, 7%, 15%);
+    display: flex;
+    position: relative;
+    align-items: center;
     .toggle-slide{
         color:#1da756;
         padding: 5px;
         margin: 10px;
         cursor: pointer;
+    }
+    .notification-container{
+        padding: 12px;
+        background-color: #1b2020;
+        width: 40px;
+        border-radius: 50%;
+        position: absolute;
+        left: 54px;
+        cursor: pointer;
+        &:after{
+            content: "";
+            background-color: #1da756;
+            width: 10px;
+            position: absolute;
+            height: 10px;
+            top: 0;
+            border-radius: 50%;
+            right: 0;
+        }
+        .notification{
+            position: absolute;
+            background-color: #fff;
+            min-width: 332px;
+            top: 105%;
+            left: 0px;
+            display: none;
+            z-index: 321423;
+            list-style: none;
+            transition: all 1s linear;
+            &.active{
+                display: block;
+                transition: all 1s linear;
+            }
+            .noti-head{
+                display: flex;
+                justify-content: space-between;
+                background-color: #1b2020;
+                text-transform: capitalize;
+                font-family: 'Roboto', sans-serif;
+                transition: all 0.5s linear;
+                padding: 15px;
+                font-weight: normal;
+                position: relative;
+                p{
+                    position:absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 20px;
+                    padding: 5px;
+                }
+                span{
+                    position:absolute;
+                    top: 50%;
+                    right: 20px;
+                    transform: translateY(-50%);
+                    padding: 5px;
+                }
+            }
+            .noti-content{
+                padding: 10px;
+                text-transform: capitalize;
+                font-family: 'Roboto', sans-serif;
+                li{
+                    padding: 10px;
+                    transition: all 0.5s linear;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: rgb(193, 176, 176);
+                    }
+                    i{
+                        margin-right: 10px;
+                        border-radius: 50%;
+                        font-size: 20px;
+                        position: relative;
+                        top: 4px;
+                    }
+                }
+            }
+            .noti-footer{
+                text-transform: capitalize;
+                font-family: 'Roboto', sans-serif;
+                transition: all 0.5s linear;
+                padding: 15px;
+                border-top: 1px solid gray;
+                a{
+                    text-decoration: none;
+                    font-weight: normal;
+                    padding: 12px;
+                }
+            }
+        }
     }
 }

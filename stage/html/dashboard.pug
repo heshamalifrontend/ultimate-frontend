@@ -1,4 +1,7 @@
 - var pageTitle = 'HomePage'
+- var owner = "Hesham Ali"
+- var career = "Frontend Developer"
+
 
 doctype html
 html(lang="en")
@@ -10,6 +13,8 @@ html(lang="en")
             include pug/layouts/sidebar  
             .content-area 
                 include pug/layouts/header
-                .content
-                    h1 #{pageTitle}
+                .container-fluid
+                    .content
+                        h1 #{owner}
+                        p.opacity-50.ps-3 #{career}
             include pug/layouts/scripts 
