@@ -10,9 +10,10 @@ html(lang="en")
         include pug/layouts/links
     body 
         .page.home-page
+            include pug/componats/settings
             include pug/layouts/sidebar  
             .content-area 
-                include pug/layouts/header
+                include pug/componats/header
                 .container-fluid
                     .content
                         h1 #{owner}

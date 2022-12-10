@@ -29,3 +29,39 @@ bell.addEventListener("click",()=>{
 notification.classList.toggle("active")
 })
 // end toggle notification 
+
+
+
+// start toggle user 
+let userPic = document.querySelector(".user-pic")
+let userDesc = document.querySelector(".user")
+
+
+
+userPic.addEventListener("click",()=>{
+    userDesc.classList.toggle("active")
+})
+
+
+// end toggle user 
+
+
+
+
+// start toggle settings 
+let gear = document.querySelector(".settings")
+console.log(gear)
+
+gear.addEventListener("click", () => {
+    gear.classList.toggle("sidebargear")
+})
+// end toggle settings 
+
+// start rotate gear 
+let parentGear = document.querySelector(".parent-gear")
+let Gear = document.querySelector(".fa-gear")
+
+parentGear.addEventListener("click",()=>{
+    Gear.classList.toggle("active")
+})
+// end start gear 

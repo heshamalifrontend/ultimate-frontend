@@ -1,0 +1,51 @@
+.settings{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    right: -240px;
+    top: 0px;
+    transition: all 0.3s linear;
+    height: 100%;
+    border: 1px solid red;
+    z-index: 4322;
+    background-color: white;
+    &.sidebargear{
+        right: 0px;
+    }
+    .parent-gear{
+        padding: 10px;
+        background-color: #fff;
+        height: fit-content;
+        font-size: 20px;
+        transform: translate(-38px, 205px);
+        border-radius: 5px;
+        cursor: pointer;
+        .fa-gear{
+            &.active{
+                animation: rotate 1s linear infinite;
+            }
+        }
+    }
+    .content-gear{
+        transform: translate(-20px,100px);
+        // .colors{
+
+        // }
+        // .fonts{
+
+        // }
+        // .sidebar-options{
+
+        // }
+    }
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(180deg);
+    }
+}
